@@ -32,6 +32,15 @@ let food = {
   y: Math.floor(Math.random() * rows),
 };
 
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth < 1100) {
+    document.querySelector(".chan").innerText =
+      `welcome to the Snake game, Swipe to move`;
+  }
+});
+ 
+
+
 const blocks = [];
 let snake = [{ x: 4, y: 5 }];
 
@@ -207,3 +216,4 @@ addEventListener("touchend", (e) => {
     }
   }
 });
+
