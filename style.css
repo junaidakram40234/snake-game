@@ -125,6 +125,7 @@ section .infos {
   flex-direction: column;
   align-items: center;
   gap: var(--space-lg);
+  text-align: center;
 }
 .modal .strat-game h1{
   font-size: 2rem;
