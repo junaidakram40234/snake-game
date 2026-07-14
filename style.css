@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  touch-action: none;
+  
+}
+:root {
+  /* background color */
+  --bg-primary-color: #0c0c0c;
+  --bg-fill-color: #fdfdfc;
+  --bg-food-color: rgb(233, 80, 80);
+
+  /* text color */
+  --text-primary-color: #f0f0f0;
+
+  /* spacing variable */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 48px;
+
+  /* border color */
+  --border-primary-color: #333333;
+
+  /* border raidus */
+  --raidus-xs: 4px;
+  --raidus-sm: 8px;
+  --raidus-md: 12px;
+  --raidus-lg: 16px;
+  --raidus-xl: 20px;
+  --raidus-2xl: 24px;
+}
+.btu{
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--raidus-sm);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btu:hover{
+  transform: scale(1.1);
+}
+html {
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+main,
+section {
+  height: 100%;
+  width: 100%;
+}
+section {
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+section .infos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--border-primary-color);
+  border-radius: var(--raidus-sm);
+}
+
+.board {
+  border: 1px solid var(--border-primary-color);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+}
+.block {
+  border: 1px solid var(--border-primary-color);
+}
+.fill{
+  background-color: var(--bg-fill-color);
+}
+.food {
+  background-color: var(--bg-food-color);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+.modal .start-game , .game-over{
+  background-color: var(--bg-primary-color);
+  padding: var(--space-3xl);
+  border-radius: var(--raidus-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.modal .strat-game h1{
+  font-size: 2rem;
+  text-align: center;
+}
+.modal .game-over .btu{
+  background-color: var(--bg-food-color);
+}
+.modal .game-over{
+  display: none;
+}
