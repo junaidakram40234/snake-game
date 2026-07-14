@@ -125,6 +125,13 @@ section .infos {
   flex-direction: column;
   align-items: center;
   gap: var(--space-lg);
+<<<<<<< HEAD
+=======
+  text-align: center;
+}
+.modal .strat-game h1{
+  font-size: 2rem;
+>>>>>>> 6e238cffb6a5b43fe3276b3d3b1cfd6415d51df5
   text-align: center;
   font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem);
 }
